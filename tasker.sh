@@ -7,12 +7,9 @@
 # init:
 # empty file
 echo -e "TO DO:\n---\n" > output.md
-echo "" > output.txt
-i=1
 
 # cycle through file and add unique values to arrays
 while read -r line; do
-#echo $i >> output.txt
 
 	# get task from line
 		# foreach line that starts with - or + (or -> #l8r)
@@ -64,10 +61,6 @@ while read -r line; do
 			done
 			IFS=$OLDIFS
 		fi
-
-#echo "aft_pro: $line" >> output.txt
-#echo -e '---' >> output.txt
-((i++))
 done < todo.md
 
 # print by-name
