@@ -22,7 +22,7 @@ echo $i >> output.txt
 			# if $this_task is not in unique list, add it.
 			if [[ ! $tasks == *"$this_task"* ]]; then
 				# add to list of unique project names
-				tasks="$tasks $i $this_task;";
+				tasks="$tasks $this_task;";
 			fi
 			# else, skip.
 		fi
@@ -40,7 +40,7 @@ echo $i >> output.txt
 				# if $this_name:n is not in unique list, add it.
 				if [[ ! $names == *"$n"* ]]; then
 					# add to list of unique team member names
-					names="$names $i $n;";
+					names="$names $n;";
 				fi
 			done
 			IFS=$OLDIFS
@@ -59,7 +59,7 @@ echo $i >> output.txt
 				# if $this_project:p is not in unique list, add it.
 				if [[ ! $projects == *"$p"* ]]; then
 					# add to list of unique project names
-					projects="$projects $i $p;";
+					projects="$projects $p;";
 				fi
 			done
 			IFS=$OLDIFS
@@ -72,16 +72,37 @@ done < todo.md
 
 # print by-name
 echo -e "\n## by name:\n" >> output.md
-echo "$names" >> output.md
+	# loop through $names
+	OLDIFS=$IFS
+	IFS=';'
+	for this_name in $names; do
+		echo -e "\n### $this_name\n" >> output.md
+		sed -n -e '/'$this_name'/p' todo.md >> output.md
+	done
+	IFS=$OLDIFS
 
 # print by-project
 echo -e "\n## by project:\n" >> output.md
-echo "$projects" >> output.md
+	# loop through $projects
+	OLDIFS=$IFS
+	IFS=';'
+	for this_project in $projects; do
+		echo -e "\n### $this_project\n" >> output.md
+		sed -n -e '/'$this_project'/p' todo.md >> output.md
+	done
+	IFS=$OLDIFS
 
 
 # print all tasks
 echo -e "\n## all tasks:\n" >> output.md
-echo "$tasks" >> output.md
+	# loop through $tasks
+	OLDIFS=$IFS
+	IFS=';'
+	for this_task in $tasks; do
+		echo -e "\n### $this_task\n" >> output.md
+		sed -n -e '/'$this_task'/p' todo.md >> output.md
+	done
+	IFS=$OLDIFS
 
 
 # markdown

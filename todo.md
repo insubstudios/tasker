@@ -3,15 +3,15 @@
 - task ; @ names ; # project_1, project_2
 + 	  	 i'm pretty sure this list has enough inconsistancies to push my regex skillz#project_1
 - insert nxt_ling into output_file-PREVIOUS; @lucy, benson; # second_stage, project_1
-- insert nxt_ling into output_file-PREVIOUS; @mlk; # second_stage, project_1
-- insert nxt_ling into output_file-PREVIOUS; @malcolm x; # second_stage, project_1
-- insert nxt_ling into output_file-PREVIOUS; @harriet t.; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @mlk, zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @malcolm x, zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @harriet t., zb ; # second_stage, project_1
 
 + cycle through file, build arrays for unique tasks, names, projects; @zb; #first_stage
-- merge "@" and "#" data if diff between non-unique " -tasks"
 - print by-name; @zb; #first_stage	 
 - print by-project; @zb; #first_stage  
 - print all tasks; @zb; #first_stage	  
+- merge "@" and "#" data if diff between non-unique " -tasks"
 - markdown; @zb; #first_stage
 - git commit, -m "???" ; @zb; #first_stage
 - add outline nav and anchor_links; @zb; #first_stage, low priority

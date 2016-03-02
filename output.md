@@ -1,49 +1,173 @@
 TO DO:
 ---
 
+
 ## by name:
 
-3 names;
-5 lucy;
-5 benson;
-6 mlk;
-7 malcolm x;
-8 harriet t.;
-10 zb;
+
+###  names
+
+- task ; @ names ; # project_1, project_2
++ cycle through file, build arrays for unique tasks, names, projects; @zb; #first_stage
+
+###  lucy
+
+
+###  benson
+
+- insert nxt_ling into output_file-PREVIOUS; @lucy, benson; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @zb, benson # second_stage
+
+###  mlk
+
+
+###  zb
+
+- insert nxt_ling into output_file-PREVIOUS; @mlk, zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @malcolm x, zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @harriet t., zb ; # second_stage, project_1
+- output_file >> output_file-TIMESTAMP; @ zb; # second_stage;
+
+###  malcolm x
+
+
+###  harriet t.
+
 
 ## by project:
 
-3 project_1;
-3 project_2;
-5 second_stage;
-10 first_stage;
-17 low priority;
-19 querry;
-25 l8r;
+
+###  project_1
+
+- task ; @ names ; # project_1, project_2
+- insert nxt_ling into output_file-PREVIOUS; @lucy, benson; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @mlk, zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @malcolm x, zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @harriet t., zb ; # second_stage, project_1
+
+###  project_2
+
+- task ; @ names ; # project_1, project_2
+
+###  second_stage
+
+- insert nxt_ling into output_file-PREVIOUS; @lucy, benson; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @mlk, zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @malcolm x, zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @harriet t., zb ; # second_stage, project_1
+- output_file >> output_file-TIMESTAMP; @ zb; # second_stage;
+- insert nxt_ling into output_file-PREVIOUS; @zb, benson # second_stage
+
+###  first_stage
+
+
+###  low priority
+
+- add outline nav and anchor_links; @zb; #first_stage, low priority
+- cp to dropbox; @zb; #first_stage, low priority
+
+###  querry
+
+
+###  l8r
+
 
 ## all tasks:
 
-3 task;
-4 i'm pretty sure this list has enough inconsistancies to push my regex skillz#project_1;
-5 insert nxt_ling into output_file-PREVIOUS;
-10 cycle through file, build arrays for unique tasks, names, projects;
-11 merge "@" and "#" data if diff between non-unique " -tasks";
-12 print by-name;
-13 print by-project;
-14 print all tasks;
-15 markdown;
-16 git commit, -m "???";
-17 add outline nav and anchor_links;
-18 cp to dropbox;
-19 print order settings, functions?;
-21 retire "+ tasks";
-22 output_file >> output_file-TIMESTAMP;
-23 find prev_link, lookup previous output_file;
-25 better "@" and "#" hangling, #l8r;
-27 add link to output_file-TIMESTAMP into archive_file;
-28 add priority, somethign like "#project_2***";
-29 add seperate files for each name and project, w/ prev/actv/nxt navigation;
-30 accept multiple input files to allow users to edit their own .md files;
-31 add section header parsing to apply "#project"" to all following tasks until "nn" or another heading;
-32 add project definitions, ex: "#project_1: i'm just fucking with you, don't do these things. they're just to test the parser." and display as a paragraph under the project heading in by-projects;
 
+###  task
+
+- task ; @ names ; # project_1, project_2
++ cycle through file, build arrays for unique tasks, names, projects; @zb; #first_stage
+- print all tasks; @zb; #first_stage	  
+- retire "+ tasks"
+- add section header parsing to apply "#project"" to all following tasks until "\n\n" or another heading
+
+###  i'm pretty sure this list has enough inconsistancies to push my regex skillz#project_1
+
++ 	  	 i'm pretty sure this list has enough inconsistancies to push my regex skillz#project_1
+
+###  insert nxt_ling into output_file-PREVIOUS
+
+- insert nxt_ling into output_file-PREVIOUS; @lucy, benson; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @mlk, zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @malcolm x, zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @harriet t., zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @zb, benson # second_stage
+
+###  cycle through file, build arrays for unique tasks, names, projects
+
++ cycle through file, build arrays for unique tasks, names, projects; @zb; #first_stage
+
+###  print by-name
+
+- print by-name; @zb; #first_stage	 
+
+###  print by-project
+
+- print by-project; @zb; #first_stage  
+
+###  print all tasks
+
+- print all tasks; @zb; #first_stage	  
+
+###  merge "@" and "#" data if diff between non-unique " -tasks"
+
+- merge "@" and "#" data if diff between non-unique " -tasks"
+
+###  markdown
+
+- markdown; @zb; #first_stage
+
+###  git commit, -m "???"
+
+- git commit, -m "???" ; @zb; #first_stage
+
+###  add outline nav and anchor_links
+
+- add outline nav and anchor_links; @zb; #first_stage, low priority
+
+###  cp to dropbox
+
+- cp to dropbox; @zb; #first_stage, low priority
+
+###  print order settings, functions?
+
+- print order settings, functions?;; #querry
+
+###  retire "+ tasks"
+
+- retire "+ tasks"
+
+###  output_file >> output_file-TIMESTAMP
+
+- output_file >> output_file-TIMESTAMP; @ zb; # second_stage;
+
+###  find prev_link, lookup previous output_file
+
+- find prev_link, lookup previous output_file; @zb; #second_stage
+
+###  better "@" and "#" hangling, #l8r
+
+- better "@" and "#" hangling, #l8r
+
+###  add link to output_file-TIMESTAMP into archive_file
+
+- add link to output_file-TIMESTAMP into archive_file; #l8r
+
+###  add priority, somethign like "#project_2***"
+
+
+###  add seperate files for each name and project, w/ prev/actv/nxt navigation
+
+
+###  accept multiple input files to allow users to edit their own .md files
+
+- accept multiple input files to allow users to edit their own .md files; #l8r
+
+###  add section header parsing to apply "#project"" to all following tasks until "nn" or another heading
+
+
+###  add project definitions, ex: "#project_1: i'm just fucking with you, don't do these things. they're just to test the parser." and display as a paragraph under the project heading in by-projects
+
+- add project definitions, ex: "#project_1: i'm just fucking with you, don't do these things. they're just to test the parser." and display as a paragraph under the project heading in by-projects
