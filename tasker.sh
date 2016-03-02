@@ -6,7 +6,7 @@
 
 # init:
 # empty file
-echo -e "TO DO:\n---\n" > output.md
+echo -e "TO DO:\n===" > output.md
 
 # cycle through file and add unique values to arrays
 while read -r line; do
@@ -64,43 +64,43 @@ while read -r line; do
 done < todo.md
 
 # print by-name
-echo -e "\n## by name:\n" >> output.md
+echo -e "\n---\nby name\n---" >> output.md
 
 	# loop through $names
 	OLDIFS=$IFS
 	IFS=';'
 	for this_name in $names; do
-		echo -e "\n### $this_name:\n" >> output.md
+		echo -e "\n### $this_name:" >> output.md
 		sed -ne '/.*[^"]@.*'$this_name'/p' todo.md >> output.md
 	done
 	IFS=$OLDIFS
 
 	# get all unassigned tasks
-	echo -e "\n### unassigned:\n" >> output.md
+	echo -e "\n### unassigned:" >> output.md
 	sed -ne '/[^"]@/!p' todo.md | sed -ne '/^[\+\-].*/p' >> output.md
 
 # print by-project
-echo -e "\n## by project:\n" >> output.md
+echo -e "\n---\nby project\n---" >> output.md
 	# loop through $projects
 	OLDIFS=$IFS
 	IFS=';'
 	for this_project in $projects; do
-		echo -e "\n### $this_project:\n" >> output.md
+		echo -e "\n### $this_project:" >> output.md
 		sed -ne '/.*[^"]#.*'$this_project'/p' todo.md >> output.md
 	done
 	IFS=$OLDIFS
 
 	# get all unassociated tasks
-	echo -e "\n### unassociated:\n" >> output.md
+	echo -e "\n### unassociated:" >> output.md
 	sed -ne '/[^"]#/!p' todo.md | sed -ne '/^[\+\-].*/p' >> output.md
 
 # print all tasks
-echo -e "\n## all tasks:\n" >> output.md
+echo -e "\n---\nall tasks\n---" >> output.md
 	# loop through $tasks
 	OLDIFS=$IFS
 	IFS=';'
 	for this_task in $tasks; do
-		echo -e "\n### $this_task\n" >> output.md
+		echo -e "\n### $this_task:" >> output.md
 		sed -ne '/^[\+\-]\s*'"$this_task"'.*/p' todo.md >> output.md
 	done
 	IFS=$OLDIFS
