@@ -5,7 +5,8 @@
 - insert nxt_ling into output_file-PREVIOUS; @lucy, benson; # second_stage, project_1
 - insert nxt_ling into output_file-PREVIOUS; @mlk, zb ; # second_stage, project_1
 - insert nxt_ling into output_file-PREVIOUS; @malcolm x, zb ; # second_stage, project_1
-- insert nxt_ling into output_file-PREVIOUS; @harriet t., zb ; # second_stage, project_1
+- insert nxt_ling into output_file-PREVIOUS; @har'riet t., zb ; # second_stage, project_1
+- mlk
 
 + cycle through file, build arrays for unique tasks, names, projects; @zb; #first_stage
 - print by-name; @zb; #first_stage	 
