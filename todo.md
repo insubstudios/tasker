@@ -1,6 +1,6 @@
 # TODO:
 
-- task ; @ names ; # project_1, project_2
+- task ; @ name_1, names ; # project_1, project_2
 + 	  	 i'm pretty sure this list has enough inconsistencies to push my regex skillz#project_1
 - i'll pretend i have to talk to "@harriet, kes" sdfasdf, @mlk, #project_2
 - insert nxt_link into output_file-PREVIOUS; @lucy, benson; # second_stage, project_1

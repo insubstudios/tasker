@@ -5,8 +5,11 @@ TO DO:
 by name
 ---
 
+### name_1:
+- task ; @ name_1, names ; # project_1, project_2
+
 ### names:
-- task ; @ names ; # project_1, project_2
+- task ; @ name_1, names ; # project_1, project_2
 
 ### mlk:
 - i'll pretend i have to talk to "@harriet, kes" sdfasdf, @mlk, #project_2
@@ -61,7 +64,7 @@ by project
 ---
 
 ### project_1:
-- task ; @ names ; # project_1, project_2
+- task ; @ name_1, names ; # project_1, project_2
 + 	  	 i'm pretty sure this list has enough inconsistencies to push my regex skillz#project_1
 - insert nxt_link into output_file-PREVIOUS; @lucy, benson; # second_stage, project_1
 - insert nxt_link into output_file-PREVIOUS; @mlk, zb ; # second_stage, project_1
@@ -69,7 +72,7 @@ by project
 - insert nxt_link into output_file-PREVIOUS; @harriet t., zb ; # second_stage, project_1
 
 ### project_2:
-- task ; @ names ; # project_1, project_2
+- task ; @ name_1, names ; # project_1, project_2
 - i'll pretend i have to talk to "@harriet, kes" sdfasdf, @mlk, #project_2
 
 ### second_stage:
@@ -122,7 +125,7 @@ all tasks
 ---
 
 ### task:
-- task ; @ names ; # project_1, project_2
+- task ; @ name_1, names ; # project_1, project_2
 
 ### i'm pretty sure this list has enough inconsistencies to push my regex skillz:
 + 	  	 i'm pretty sure this list has enough inconsistencies to push my regex skillz#project_1
