@@ -11,12 +11,12 @@ use notes:
 - tasks marked - are undone (minus points), while + are finished (winning!)**
 - assign tasks to people using the at-sign (@)
 - add tasks to projects with a hashtag (#)
-- chunks end when @, #, or ; appear, or at the end of the lines
+- chunks end when @, #, or ; appear, or at the end of line
 - "@", "#", and ";" not used to mark assignments, projects, and breaks must be quoted
 - the task chunk must come first
 - assignment and project chunks can be in either order
 - comma separate for multiple assignments or project associations
-- commas in tasks don't effect anything
+- commas in task chunks don't effect anything
 - lines not beginning with - or + ignored (so go ahead and add some formatting to your [todo.md](https://github.com/insubstudios/tasker/blob/master/todo.md))
 
 todo.md format:
