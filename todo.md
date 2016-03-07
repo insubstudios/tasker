@@ -1,8 +1,8 @@
 # TODO:
 
----e
+---
 
--## formats
+## formats
 
 - actionable task; @name-1, name-2; #project-1, project-2
 - actionable task @name-1, name-2 #project-1, project-2
