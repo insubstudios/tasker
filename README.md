@@ -40,4 +40,5 @@ partial lines are okay:
 ---
 
 \*output.html is a direct product of `markdown output.md > output.html` right now, not a full webpage.
+
 \*\*points: the plan is to have the script sort out and archive the completed tasks. see #second-stage and #l8r for more future features.
