@@ -1,18 +1,14 @@
 # TODO:
 
-### nonesense
+---e
 
+-## formats
+
+- actionable task; @name-1, name-2; #project-1, project-2
+- actionable task @name-1, name-2 #project-1, project-2
+- actionable task #project-1, project-2 @name-1, name-2
+- actionable task ; #project-1, project-2 ; @name-1, name-2
 - actionable task; @person; #project;
-- can we this task  #newthing,nother @newguy
-- can we this task  #newthing,   	 nother @newguy
-- task ; @ name-1, names ; # project-1, project-2
-+ 	  	 i'm pretty sure this list has enough inconsistencies to push my regex skillz#project-1
-- i'll pretend ";" have to talk to "@harriet, kes" sdfasdf, @mlk #names, project-2
-- insert nxt-link into output-file-PREVIOUS; @lucy, benson; # second-stage, project-1
-- insert nxt-link into output-file-PREVIOUS; @mlk, zb ; # second-stage, project-1
-- insert nxt-link into output-file-PREVIOUS; @malcolm x, zb ; # second-stage, project-1
-- insert nxt-link into output-file-PREVIOUS; @harriet t., zb ; # second-stage, project-1
-- mlk
 
 ### first-stage
 
@@ -43,3 +39,17 @@
 - accept multiple input files to allow users to edit their own .md files; #l8r
 - add section header parsing to apply "#project"" to all following tasks until "\n\n" or another heading
 - add project definitions, ex: "#project-1"": i'm just fucking with you, don't do these things. they're just to test the parser." and display as a paragraph under the project heading in by-projects
+
+
+### nonesense
+
+- can we this task  #newthing,nother @newguy
+- can we this task  #newthing,   	 nother @newguy
+- task ; @ name-1, names ; # project-1, project-2
++ 	  	 i'm pretty sure this list has enough inconsistencies to push my regex skillz#project-1
+- i'll pretend ";" have to talk to "@harriet, kes" sdfasdf, @mlk #names, project-2
+- insert nxt-link into output-file-PREVIOUS; @lucy, benson; # second-stage, project-1
+- insert nxt-link into output-file-PREVIOUS; @mlk, zb ; # second-stage, project-1
+- insert nxt-link into output-file-PREVIOUS; @malcolm x, zb ; # second-stage, project-1
+- insert nxt-link into output-file-PREVIOUS; @harriet t., zb ; # second-stage, project-1
+- mlk

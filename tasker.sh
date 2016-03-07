@@ -1,7 +1,13 @@
 #!/bin/bash
 
 # use notes:
-# "@" and "#" not used to mark assignments and projects must be quoted.
+# "@", "#", and ";" not used to mark assignments and projects must be quoted.
+# task chunk must be first, assignment and project chunks can be in either order
+# todo.md format:
+#	- actionable task; @name_1, name_2; #project_1, project_2
+#	- actionable task @name_1, name_2 #project_1, project_2
+#	- actionable task #project_1, project_2 @name_1, name_2
+#	- actionable task ; #project_1, project_2 ; @name_1, name_2
 
 
 # init:
@@ -13,7 +19,7 @@ while read -r line; do
 
 	# get task from line, record unique
 		# foreach line that starts with - or + (or -> #l8r)
-		if [[ $line =~ ^[\+\-] ]]; then
+		if [[ $line =~ ^[\+\-]\ + ]]; then
 			# escape quoted "@", "#", and ";"
 			# isolate task - the string between "-" and ;, @, or #
 			# trim task marker and white space
@@ -33,7 +39,7 @@ while read -r line; do
 
 	# get name(s) from line, record unique
 		# only get names assigned to tasks
-		if [[ $line =~ ^[\+\-] ]]; then
+		if [[ $line =~ ^[\+\-]\ + ]]; then
 			# escape quoted "@"
 			# get string between "@" and ";" (or "#")
 			this_name=`echo $line | sed -e 's/"@.*"/[AT]/' |
@@ -56,7 +62,7 @@ while read -r line; do
 
 	# get project(s) from line, record unique
 		# only get projects associated w/ tasks
-		if [[ $line =~ ^[\+\-] ]]; then
+		if [[ $line =~ ^[\+\-]\ + ]]; then
 			# escape quoted "@"
 			# get string between "#" and ";" (or "@")
 			this_project=`echo $line | sed -e 's/\"#.*\"/[HASH]/' |
@@ -90,8 +96,7 @@ echo -e "\n---\nby name\n---" >> output.md
 		# print lines where $this_name appears
 		# after an unquoted @ but before any #
 		# and emphasis to $this_name
-#		sed -ne '/.*[^"]@.*'$this_name'/p' todo.md >> output.md
-		sed -ne '/[^"]@[^#]*'$this_name'/p' todo.md |
+		sed -ne '/^[\+\-].*[^"]@[^#]*'$this_name'/p' todo.md |
 		sed -e 's/'$this_name'/\*\*'$this_name'\*\*/' >> output.md
 	done
 	IFS=$OLDIFS
@@ -99,7 +104,7 @@ echo -e "\n---\nby name\n---" >> output.md
 	# get all unassigned tasks
 	echo -e "\n### unassigned:" >> output.md
 	# print lines that do not contain an unquoted @
-	sed -ne '/[^"]@/!p' todo.md | sed -ne '/^[\+\-].*/p' >> output.md
+	sed -ne '/[^"]@/!p' todo.md | sed -ne '/^[\+\-] .*/p' >> output.md
 
 # print by-project
 echo -e "\n---\nby project\n---" >> output.md
@@ -110,7 +115,7 @@ echo -e "\n---\nby project\n---" >> output.md
 		# print project name
 		echo -e "\n### $this_project:" >> output.md
 		# print lines where $this_project appears after an unquoted #
-		sed -ne '/[^"]#[^@]*'$this_project'/p' todo.md  |
+		sed -ne '/^[\+\-].*[^"]#[^@]*'$this_project'/p' todo.md  |
 		sed -e 's/'$this_project'/\*\*'$this_project'\*\*/' >> output.md
 	done
 	IFS=$OLDIFS
@@ -118,7 +123,7 @@ echo -e "\n---\nby project\n---" >> output.md
 	# get all unassociated tasks
 	echo -e "\n### unassociated:" >> output.md
 	# print lines that do not contain an unquoted #
-	sed -ne '/[^"]#/!p' todo.md | sed -ne '/^[\+\-].*/p' >> output.md
+	sed -ne '/[^"]#/!p' todo.md | sed -ne '/^[\+\-] .*/p' >> output.md
 
 # print all tasks
 echo -e "\n---\nall tasks\n---" >> output.md
@@ -127,7 +132,7 @@ echo -e "\n---\nall tasks\n---" >> output.md
 	IFS=';'
 	for this_task in $tasks; do
 		# print task - escaped version
-		echo -e "\n### $this_task:" >> output.md
+		echo -e "\n### $this_task" >> output.md
 		# print lines starting with - or + and contains $this_task
 		sed -ne '/^[\+\-]\s*'"$this_task"'.*/p' todo.md >> output.md
 	done
