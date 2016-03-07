@@ -1,4 +1,6 @@
 #!/bin/bash
+# https://github.com/insubstudios/tasker
+# -zach.
 
 # use notes:
 # "@", "#", and ";" not used to mark assignments and projects must be quoted.
