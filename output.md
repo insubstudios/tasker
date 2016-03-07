@@ -28,7 +28,7 @@ by name
 + print all tasks; @**zb**; #first-stage	  
 + escape weird chars in unique lists, @**zb**; #fires, first-stage
 + markdown; @**zb**; #first-stage
-+ bug: this task shouldn't make this show up in names tasklist; @**zb** #names; #fires, first-stage
++ bug: this task shouldn't make this show up in names task list; @**zb** #names; #fires, first-stage
 - git commit, -m "???" ; @**zb**; #first-stage, low priority
 - add outline nav and anchor-links; @**zb**; #first-stage, low priority
 - cp to dropbox; @**zb**; #first-stage, low priority
@@ -51,7 +51,7 @@ by name
 - task ; @ name-1, **names** ; # project-1, project-2
 
 ### mlk:
-- i'll pretend ";" have to talk to "@harriet, kes" sdfasdf, @**mlk** #names, project-2
+- i'll pretend ";" have to talk to "@harriet, kes" in quotes, @**mlk** #names, project-2
 - insert nxt-link into output-file-PREVIOUS; @**mlk**, zb ; # second-stage, project-1
 
 ### lucy:
@@ -67,7 +67,7 @@ by name
 - merge "@" and "#" data if diff between non-unique " -tasks"
 - print order settings, functions?;; #querry
 - retire "+ tasks"
-- better "@" and "#;" handlink, #l8r
+- better "@" and "#;" handling, #l8r
 - add link to output-file-TIMESTAMP into archive-file; #l8r
 - add priority, something like "#project-2***" [but triple asterisk doesn't survive markdown]
 - add separate files for each name and project, w/ prev|actv|nxt navigation; #l8r
@@ -99,7 +99,7 @@ by project
 - actionable task #project-1, **project-2** @name-1, name-2
 - actionable task ; #project-1, **project-2** ; @name-1, name-2
 - task ; @ name-1, names ; # project-1, **project-2**
-- i'll pretend ";" have to talk to "@harriet, kes" sdfasdf, @mlk #names, **project-2**
+- i'll pretend ";" have to talk to "@harriet, kes" in quotes, @mlk #names, **project-2**
 
 ### first-stage:
 + cycle through file, build arrays for unique tasks, names, projects; @zb; #**first-stage**
@@ -108,18 +108,18 @@ by project
 + print all tasks; @zb; #**first-stage**	  
 + escape weird chars in unique lists, @zb; #fires, **first-stage**
 + markdown; @zb; #**first-stage**
-+ bug: this task shouldn't make this show up in names tasklist; @zb #names; #fires, **first-stage**
++ bug: this task shouldn't make this show up in names task list; @zb #names; #fires, **first-stage**
 - git commit, -m "???" ; @zb; #**first-stage**, low priority
 - add outline nav and anchor-links; @zb; #**first-stage**, low priority
 - cp to dropbox; @zb; #**first-stage**, low priority
 
 ### fires:
 + escape weird chars in unique lists, @zb; #**fires**, first-stage
-+ bug: this task shouldn't make this show up in names tasklist; @zb #names; #**fires**, first-stage
++ bug: this task shouldn't make this show up in names task list; @zb #names; #**fires**, first-stage
 
 ### names:
-+ bug: this task shouldn't make this show up in **names** tasklist; @zb #names; #fires, first-stage
-- i'll pretend ";" have to talk to "@harriet, kes" sdfasdf, @mlk #**names**, project-2
++ bug: this task shouldn't make this show up in **names** task list; @zb #names; #fires, first-stage
+- i'll pretend ";" have to talk to "@harriet, kes" in quotes, @mlk #**names**, project-2
 
 ### low priority:
 - git commit, -m "???" ; @zb; #first-stage, **low priority**
@@ -139,7 +139,7 @@ by project
 - insert nxt-link into output-file-PREVIOUS; @harriet t., zb ; # **second-stage**, project-1
 
 ### l8r:
-- better "@" and "#;" handlink, #**l8r**
+- better "@" and "#;" handling, #**l8r**
 - add link to output-file-TIMESTAMP into archive-file; #**l8r**
 - add separate files for each name and project, w/ prev|actv|nxt navigation; #**l8r**
 - accept multiple input files to allow users to edit their own .md files; #**l8r**
@@ -192,8 +192,8 @@ all tasks
 ### markdown
 + markdown; @zb; #first-stage
 
-### bug: this task shouldn't make this show up in names tasklist
-+ bug: this task shouldn't make this show up in names tasklist; @zb #names; #fires, first-stage
+### bug: this task shouldn't make this show up in names task list
++ bug: this task shouldn't make this show up in names task list; @zb #names; #fires, first-stage
 
 ### git commit, -m "???"
 - git commit, -m "???" ; @zb; #first-stage, low priority
@@ -220,7 +220,7 @@ all tasks
 - insert nxt-link into"#" "#" output-file-PREVIOUS; @zb, benson # second-stage
 
 ### better "." and ".
-- better "@" and "#;" handlink, #l8r
+- better "@" and "#;" handling, #l8r
 
 ### add link to output-file-TIMESTAMP into archive-file
 - add link to output-file-TIMESTAMP into archive-file; #l8r
@@ -247,8 +247,8 @@ all tasks
 ### i'm pretty sure this list has enough inconsistencies to push my regex skillz
 + 	  	 i'm pretty sure this list has enough inconsistencies to push my regex skillz#project-1
 
-### i'll pretend "." have to talk to ".harriet, kes" sdfasdf,
-- i'll pretend ";" have to talk to "@harriet, kes" sdfasdf, @mlk #names, project-2
+### i'll pretend "." have to talk to ".harriet, kes" in quotes,
+- i'll pretend ";" have to talk to "@harriet, kes" in quotes, @mlk #names, project-2
 
 ### insert nxt-link into output-file-PREVIOUS
 - insert nxt-link into output-file-PREVIOUS; @lucy, benson; # second-stage, project-1

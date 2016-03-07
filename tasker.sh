@@ -8,6 +8,10 @@
 #	- actionable task @name_1, name_2 #project_1, project_2
 #	- actionable task #project_1, project_2 @name_1, name_2
 #	- actionable task ; #project_1, project_2 ; @name_1, name_2
+# partial lines are okay:
+#	- one-off actionable task @name_1, name_2
+#	- actionable task that is unassigned #project_1, project_2
+#	- one-off actionable task that is unassigned
 
 
 # init:
@@ -18,7 +22,7 @@ echo -e "TO DO:\n===" > output.md
 while read -r line; do
 
 	# get task from line, record unique
-		# foreach line that starts with - or + (or -> #l8r)
+		# for each line that starts with - or + (or -> #l8r)
 		if [[ $line =~ ^[\+\-]\ + ]]; then
 			# escape quoted "@", "#", and ";"
 			# isolate task - the string between "-" and ;, @, or #
