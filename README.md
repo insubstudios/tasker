@@ -3,7 +3,7 @@ tasker
 
 **early development**
 
-[tasker.sh](https://github.com/insubstudios/tasker/blob/master/tasker.sh) is a simple, forgiving script that sorts a todo.md into lists for each team member and each project. currently, it dumps to a output [md](https://github.com/insubstudios/tasker/blob/master/output.html) and [html](https://github.com/insubstudios/tasker/blob/master/output.html)* file.
+[tasker.sh](https://github.com/insubstudios/tasker/blob/master/tasker.sh) is a simple, forgiving script that sorts a todo.md into lists for each team member and each project. currently, it dumps to a output [md](https://github.com/insubstudios/tasker/blob/master/output.md) and [html](https://github.com/insubstudios/tasker/blob/master/output.html)* file.
 
 use notes:
 
